@@ -39,3 +39,19 @@ function setLanguage(lang) {
         document.getElementById("heroDesc").innerText = "Fresh woody fragrance crafted for modern confidence.";
     }
 }
+// Burger Menu
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('navLinks');
+const overlay = document.getElementById('overlay');
+
+burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+    overlay.classList.toggle('active');
+});
+
+overlay.addEventListener('click', () => {
+    burger.classList.remove('active');
+    navLinks.classList.remove('active');
+    overlay.classList.remove('active');
+});
